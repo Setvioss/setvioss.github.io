@@ -7,7 +7,7 @@ main {
 #promo {
   display: block;
 }
-@media (min-width: 420px) {
+@media (min-width: 500px) {
   #promo {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -56,7 +56,7 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-width: 420px) {
+@media (min-width: 500px) {
   #promo .promo-info .promo-image_mobile {
     display: none;
   }
@@ -68,7 +68,7 @@ main {
   width: 50%;
   text-align: center;
 }
-@media (min-width: 420px) {
+@media (min-width: 500px) {
   #promo .promo-info .promo-info_button {
     width: 40%;
     margin: 1rem auto;
@@ -84,12 +84,12 @@ main {
 #about {
   text-align: center;
 }
-@media (min-width: 420px) {
+@media (min-width: 500px) {
   #about {
     text-align: justify;
   }
 }
-@media (min-width: 420px) {
+@media (min-width: 500px) {
   #about h2 {
     margin-block-end: 7rem;
   }
@@ -111,7 +111,7 @@ main {
 #about .about_info-row_1 {
   align-items: center;
 }
-@media (min-width: 420px) {
+@media (min-width: 500px) {
   #about .about_info-row_1 {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -122,7 +122,7 @@ main {
 #about .about_info-row_1 .info-row_text {
   padding-block: 1rem;
 }
-@media (min-width: 420px) {
+@media (min-width: 500px) {
   #about .about_info-row_1 .info-row_text {
     padding-left: 2rem;
   }
@@ -131,7 +131,7 @@ main {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 420px) {
+@media (min-width: 500px) {
   #about .about_info-row_2 {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -143,7 +143,7 @@ main {
   order: 1;
   padding-block: 1rem;
 }
-@media (min-width: 420px) {
+@media (min-width: 500px) {
   #about .about_info-row_2 .info-row_text {
     padding-right: 2rem;
     order: 0;
@@ -156,7 +156,7 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-width: 420px) {
+@media (min-width: 500px) {
   #about .info-row_image {
     height: 100%;
     background-position-x: 0.8rem;
@@ -166,7 +166,7 @@ main {
 #catalog {
   width: 90%;
 }
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   #catalog {
     margin-bottom: 1rem;
   }
@@ -177,7 +177,7 @@ main {
   justify-content: center;
   margin-block-start: 4rem;
 }
-@media (min-width: 420px) {
+@media (min-width: 500px) {
   #catalog .product-card_wrapper {
     flex-direction: row;
     margin-block-start: 7rem;
@@ -191,7 +191,7 @@ main {
 #info h2 {
   margin-block-end: 4rem;
 }
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   #info h2 {
     margin-bottom: 2.5rem;
   }
@@ -200,7 +200,7 @@ main {
   flex-direction: row;
   margin-bottom: 1.5rem;
 }
-@media (min-width: 420px) {
+@media (min-width: 500px) {
   #info .info-block {
     display: flex;
   }
