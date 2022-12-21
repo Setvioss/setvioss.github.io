@@ -24,7 +24,7 @@ section {
   width: 85%;
   margin-bottom: 3rem;
 }
-@media (min-width: 550px) {
+@media (min-width: 650px) {
   section {
     width: 70%;
     margin-bottom: 5rem;
@@ -46,7 +46,7 @@ h2 {
   margin-block-end: 4rem;
   width: 100%;
 }
-@media (550px) {
+@media (650px) {
   h2 {
     width: 500px;
     margin: 0 auto;
@@ -248,7 +248,7 @@ li {
   margin-inline: 1rem;
   padding: 1rem;
 }
-@media (min-width: 550px) {
+@media (min-width: 650px) {
   .product-card {
     height: 450px;
   }
