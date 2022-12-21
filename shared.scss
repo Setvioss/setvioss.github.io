@@ -50,7 +50,7 @@ h2 {
     margin-block-end: 4rem;
     width: 100%;
 
-    @media (min-width: 392px) {
+    @media (map-get($media-breakpoints, point_1)) {
         width: 500px;
         margin: 0 auto;
     }
