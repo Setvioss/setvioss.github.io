@@ -24,7 +24,7 @@ section {
   width: 85%;
   margin-bottom: 3rem;
 }
-@media (min-width: 550px) {
+@media (min-width: 420px) {
   section {
     width: 70%;
     margin-bottom: 5rem;
@@ -46,7 +46,7 @@ h2 {
   margin-block-end: 4rem;
   width: 100%;
 }
-@media (550px) {
+@media (420px) {
   h2 {
     width: 500px;
     margin: 0 auto;
@@ -131,9 +131,9 @@ li {
   }
 }
 .main-header .burger-menu_icon {
-  min-width: 2rem;
+  min-width: 2.3rem;
   cursor: pointer;
-  margin-inline: 0.9rem;
+  margin-inline: 1.5rem;
 }
 @media (min-width: 768px) {
   .main-header .burger-menu_icon {
@@ -248,7 +248,7 @@ li {
   margin-inline: 1rem;
   padding: 1rem;
 }
-@media (min-width: 550px) {
+@media (min-width: 420px) {
   .product-card {
     height: 450px;
   }

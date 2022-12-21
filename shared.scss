@@ -145,9 +145,9 @@ li {
     }
 
     .burger-menu_icon {
-        min-width: 2rem;
+        min-width: 2.3rem;
         cursor: pointer;
-        margin-inline: .9rem;
+        margin-inline: 1.5rem;
 
         @media (min-width: map-get($media-breakpoints, point_2)) {
             display: none;
