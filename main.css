@@ -1,0 +1,223 @@
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 9rem;
+}
+
+#promo {
+  display: block;
+}
+@media (min-width: 392px) {
+  #promo {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    margin-block-start: 3rem;
+    margin-block-end: 7rem;
+    width: 90%;
+  }
+}
+#promo .promo-info h1 {
+  text-align: center;
+  font-size: 1.5em;
+  font-variant: small-caps;
+  background-color: #e2e2e2;
+  padding: 0.5rem;
+  margin-block: 1.5rem;
+}
+@media (min-width: 392px) {
+  #promo .promo-info h1 {
+    font-size: 1.5rem;
+    text-align: initial;
+    margin-bottom: 1rem;
+  }
+}
+#promo .promo-info .promo-info-text-wrapper {
+  display: flex;
+  align-items: center;
+}
+#promo .promo-info .promo-info-text-wrapper .promo-info_icon {
+  height: 1.2rem;
+  min-width: 1.2rem;
+  background-image: url("images/crown.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 1rem;
+  opacity: 0.7;
+}
+#promo .promo-info .promo-info-text-wrapper .promo-info_text {
+  margin-block: 0.3rem;
+}
+#promo .promo-info .promo-image_mobile {
+  min-height: 250px;
+  margin-block: 1.5rem;
+  background: url("images/img_4.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 392px) {
+  #promo .promo-info .promo-image_mobile {
+    display: none;
+  }
+}
+#promo .promo-info .promo-info_button {
+  margin: 2.5rem auto;
+  padding: 0.7rem;
+  font-size: 1rem;
+  width: 50%;
+  text-align: center;
+}
+@media (min-width: 392px) {
+  #promo .promo-info .promo-info_button {
+    width: 40%;
+    margin: 1rem auto;
+  }
+}
+#promo .promo-image {
+  background: url("images/img_4.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#about {
+  text-align: center;
+}
+@media (min-width: 392px) {
+  #about {
+    text-align: justify;
+  }
+}
+@media (min-width: 392px) {
+  #about h2 {
+    margin-block-end: 7rem;
+  }
+}
+#about p {
+  margin-block: 0.5rem;
+  list-style: circle;
+}
+#about .crown-icon {
+  display: inline-block;
+  width: 2rem;
+  height: 1rem;
+  vertical-align: middle;
+  background-image: url(images/crown.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#about .about_info-row_1 {
+  align-items: center;
+}
+@media (min-width: 392px) {
+  #about .about_info-row_1 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    height: 200px;
+  }
+}
+#about .about_info-row_1 .info-row_text {
+  padding-block: 1rem;
+}
+@media (min-width: 392px) {
+  #about .about_info-row_1 .info-row_text {
+    padding-left: 2rem;
+  }
+}
+#about .about_info-row_2 {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 392px) {
+  #about .about_info-row_2 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    height: 200px;
+  }
+}
+#about .about_info-row_2 .info-row_text {
+  order: 1;
+  padding-block: 1rem;
+}
+@media (min-width: 392px) {
+  #about .about_info-row_2 .info-row_text {
+    padding-right: 2rem;
+    order: 0;
+  }
+}
+#about .info-row_image {
+  height: 130px;
+  background: url("images/img_4.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 392px) {
+  #about .info-row_image {
+    height: 100%;
+    background-position-x: 0.8rem;
+  }
+}
+
+#catalog {
+  width: 90%;
+}
+@media (max-width: 392px) {
+  #catalog {
+    margin-bottom: 1rem;
+  }
+}
+#catalog .product-card_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-block-start: 4rem;
+}
+@media (min-width: 392px) {
+  #catalog .product-card_wrapper {
+    flex-direction: row;
+    margin-block-start: 7rem;
+  }
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+}
+#info h2 {
+  margin-block-end: 4rem;
+}
+@media (max-width: 392px) {
+  #info h2 {
+    margin-bottom: 2.5rem;
+  }
+}
+#info .info-block {
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 392px) {
+  #info .info-block {
+    display: flex;
+  }
+}
+#info .info-block .info-block_text {
+  flex-basis: 70%;
+  padding-inline: 1.5rem;
+}
+#info .info-block .info-block_button {
+  display: inline-block;
+  margin-left: auto;
+  padding: 0.4rem;
+  margin-block: 1rem;
+}
+#info .info-block .info-block_picture {
+  background-color: red;
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=main.css.map */

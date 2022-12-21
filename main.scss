@@ -1,0 +1,253 @@
+@import "_variables.scss";
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 9rem;
+}
+
+#promo {
+    display: block;
+
+    @media (min-width: map-get($media-breakpoints, point_1)) {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        margin-block-start: 3rem;
+        margin-block-end: 7rem;
+        width: 90%;
+    }
+
+    .promo-info {
+
+        h1 {
+            text-align: center;         
+            font-size: 1.5em;
+            font-variant: small-caps;
+            background-color: map-get($colors,main);
+            padding: .5rem;
+            margin-block: 1.5rem;
+
+            @media (min-width: 392px) {
+                font-size: 1.5rem;
+                text-align: initial;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .promo-info-text-wrapper {
+            display: flex;
+            align-items: center;
+    
+            .promo-info_icon {
+                height: 1.2rem;
+                min-width: 1.2rem;
+                background-image: url('images/crown.jpg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-right: 1rem;
+                opacity: .7;
+            }
+    
+            .promo-info_text {
+                margin-block: .3rem;
+            }
+        }
+        
+        .promo-image_mobile {
+            min-height: 250px;
+            margin-block: 1.5rem;
+            background: url("images/img_4.jpg");
+            background: {
+                size: contain;
+                repeat: no-repeat;
+                position: center;
+            }
+            
+            @media (min-width: map-get($media-breakpoints, point_1)) {
+               display: none;
+            }
+        }
+        
+        .promo-info_button {
+            margin: 2.5rem auto;
+            padding: .7rem;
+            font-size: 1rem;
+            width: 50%;
+            text-align: center;
+    
+            @media (min-width: map-get($media-breakpoints, point_1)) {
+                width: 40%;
+                margin: 1rem auto;
+            }
+        }
+        
+    }
+
+    
+    
+    .promo-image {
+        background: url("images/img_4.jpg");
+        background: {
+            size: contain;
+            repeat: no-repeat;
+            position: right;
+        }
+    }
+    
+}
+
+#about {
+    text-align: center;
+
+    @media (min-width: map-get($media-breakpoints, point_1)) {
+        text-align: justify;
+    }
+
+    h2 {
+
+        @media (min-width: map-get($media-breakpoints, point_1)) {
+            margin-block-end: 7rem;
+        }
+    }
+
+    p {
+        margin-block: .5rem;
+        list-style: circle;
+    }
+
+    .crown-icon {
+        display: inline-block;
+        width: 2rem;
+        height: 1rem;
+        vertical-align: middle;
+        background: {
+            image: url(images/crown.jpg);
+            size: contain;
+            position: center;
+            repeat: no-repeat;
+        }
+    }
+
+    .about_info-row_1 {
+        align-items: center;
+
+        @media (min-width: map-get($media-breakpoints, point_1)) {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            align-items: center;
+            height: 200px;
+        }
+
+        .info-row_text {
+            padding-block: 1rem;
+            
+            @media (min-width: map-get($media-breakpoints, point_1)) {
+                padding-left: 2rem;
+            }
+        }
+    } 
+        
+    .about_info-row_2 {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: map-get($media-breakpoints, point_1)) {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            align-items: center;
+            height: 200px;
+        }
+
+        .info-row_text {
+            order: 1;
+            padding-block: 1rem;
+            
+            @media (min-width: map-get($media-breakpoints, point_1)) {
+                padding-right: 2rem;
+                order: 0;
+            }
+        }
+    }
+    
+    .info-row_image {
+        height: 130px;
+        background: url("images/img_4.jpg");
+        background: {
+            size: contain;
+            repeat: no-repeat;
+            position: center;
+            
+        }
+
+        @media (min-width: map-get($media-breakpoints, point_1)) {
+            height: 100%;
+            background-position-x: 0.8rem;
+        }
+    }
+}
+
+#catalog {    
+    width: 90%;
+
+    @media (max-width: map-get($media-breakpoints, point_1)) {
+        margin-bottom: 1rem;    
+    }    
+
+    .product-card_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-block-start: 4rem;
+
+        @media (min-width: map-get($media-breakpoints, point_1)) {
+            flex-direction: row;
+            margin-block-start: 7rem;    
+        }
+    }
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        margin-block-end: 4rem;
+
+        @media (max-width: map-get($media-breakpoints, point_1)) {
+            margin-bottom: 2.5rem;    
+        }
+    }
+
+    .info-block {
+        flex-direction: row;
+        margin-bottom: 1.5rem;
+
+        @media (min-width: map-get($media-breakpoints, point_1)) {
+            display: flex;    
+        }
+
+        .info-block_text {
+            flex-basis: 70%;
+            padding-inline: 1.5rem;
+        }
+        
+        .info-block_button {
+            display: inline-block;
+            margin-left: auto;
+            padding: .4rem;
+            margin-block: 1rem;
+        }
+        
+        .info-block_picture {
+            background-color: red;
+            flex-grow: 1;
+        }
+    }     
+}
+
+
+
+
+
+
