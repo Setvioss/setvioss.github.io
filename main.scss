@@ -209,6 +209,49 @@ main {
 
 #testimonials  {
 
+    .testimonials_modal {
+        position: fixed;
+        display: none;
+        z-index: 200;
+        top: 20%;
+        left: 20%;
+        width: 60%;
+        background-color: white;
+        text-align: center;
+
+        &.testimonials_modal_active {
+            display: block;
+        }
+
+        p {
+            padding: 2rem;
+        }
+
+        .testimonials_modal_button {
+            margin: 2rem auto;
+            
+        }
+
+        .testimonials_modal_close_button {
+            position: absolute;
+            top: 4%;
+            right: 4%;
+            padding: .2rem;
+            margin: 0;
+            border: none;
+            font: {
+                size: 1.2rem;
+                weight: bold;
+                family: Roboto;
+            }
+
+            &:hover {
+                background-color: white;
+            }
+
+        }
+    }
+
     .testimonial-container{
         display: flex;
         flex-direction: column;
@@ -234,7 +277,7 @@ main {
         }
     }
 
-    .testimonails-button {
+    .testimonials-button {
         margin: 0 auto;
     }
 }

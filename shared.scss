@@ -77,6 +77,10 @@ li {
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
 
+    &.backdrop-active {
+        display: block;
+    }
+
 }
 
 .button {

@@ -184,6 +184,39 @@ main {
   }
 }
 
+#testimonials .testimonials_modal {
+  position: fixed;
+  display: none;
+  z-index: 200;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  background-color: white;
+  text-align: center;
+}
+#testimonials .testimonials_modal.testimonials_modal_active {
+  display: block;
+}
+#testimonials .testimonials_modal p {
+  padding: 2rem;
+}
+#testimonials .testimonials_modal .testimonials_modal_button {
+  margin: 2rem auto;
+}
+#testimonials .testimonials_modal .testimonials_modal_close_button {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  padding: 0.2rem;
+  margin: 0;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: Roboto;
+}
+#testimonials .testimonials_modal .testimonials_modal_close_button:hover {
+  background-color: white;
+}
 #testimonials .testimonial-container {
   display: flex;
   flex-direction: column;
@@ -204,7 +237,7 @@ main {
   justify-content: space-between;
   width: 90%;
 }
-#testimonials .testimonails-button {
+#testimonials .testimonials-button {
   margin: 0 auto;
 }
 

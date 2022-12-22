@@ -40,3 +40,26 @@ document.addEventListener('scroll', () => {
     }
 
 })
+
+const testimonials_button = document.querySelector('.testimonials-button');
+const backdrop = document.querySelector('.backdrop');
+const testimonials_modal = document.querySelector('.testimonials_modal');
+const testimonials_modal_close_button = document.querySelector('.testimonials_modal_close_button');
+const testimonials_modal_button = document.querySelector('.testimonials_modal_button');
+
+testimonials_button.addEventListener('click', () => {
+
+    backdrop.classList.add('backdrop-active');
+    testimonials_modal.classList.add('testimonials_modal_active')
+
+    testimonials_modal_close_button.addEventListener('click', () => {
+        backdrop.classList.remove('backdrop-active');
+        testimonials_modal.classList.remove('testimonials_modal_active')
+    })
+
+    testimonials_modal_button.addEventListener('click', () => {
+        backdrop.classList.remove('backdrop-active');
+        testimonials_modal.classList.remove('testimonials_modal_active')
+    })
+
+})
