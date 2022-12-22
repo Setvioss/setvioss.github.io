@@ -197,13 +197,45 @@ main {
     .product-card_wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
         margin-block-start: 4rem;
 
         @media (min-width: map-get($media-breakpoints, point_1)) {
             flex-direction: row;
             margin-block-start: 7rem;    
         }
+    }
+}
+
+#testimonials  {
+
+    .testimonial-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            margin-bottom: 2rem;
+        }
+
+        .user-photo {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+            background-color: gold;
+            margin-bottom: 1rem;
+
+        }
+
+        .rating_date_container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+        }
+    }
+
+    .testimonails-button {
+        margin: 0 auto;
     }
 }
 
