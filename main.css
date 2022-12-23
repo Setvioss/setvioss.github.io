@@ -241,6 +241,31 @@ main {
   margin: 0 auto;
 }
 
+#FAQ .question_container {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+#FAQ .question_container div {
+  padding: 1rem;
+  margin-block: 1rem;
+  border: 1px solid;
+}
+#FAQ .question_container .question {
+  cursor: pointer;
+}
+#FAQ .question_container .question .answer {
+  display: none;
+}
+#FAQ .question_container .question .answer.answer_active {
+  display: block;
+  padding-inline: 0.5rem;
+  margin-top: 1rem;
+  text-align: left;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
 #info {
   display: flex;
   flex-direction: column;

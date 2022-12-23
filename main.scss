@@ -282,6 +282,40 @@ main {
     }
 }
 
+#FAQ {
+
+    .question_container {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+
+        div {
+            padding: 1rem;
+            margin-block: 1rem;
+            border: 1px solid map-get($colors,black);
+        }
+
+        .question {
+            cursor: pointer;
+
+            .answer {
+                display: none;
+    
+                &.answer_active {
+                    display: block;
+                    padding-inline: .5rem;
+                    margin-top: 1rem;
+                    text-align: left;
+                    font: {
+                        style: italic;
+                        size: .9em;   
+                    }
+                }
+            }
+        }
+    }
+}
+
 #info {
     display: flex;
     flex-direction: column;

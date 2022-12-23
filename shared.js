@@ -24,6 +24,7 @@ burger_menu_icon.addEventListener('click', () => {
 
 const promo = document.querySelector('#promo');
 const header = document.querySelector('.main-header');
+const logo_container = document.querySelector('.logo-container');
 
 document.addEventListener('scroll', () => {
 
@@ -63,3 +64,70 @@ testimonials_button.addEventListener('click', () => {
     })
 
 })
+
+const nav_links = document.querySelectorAll('.header-nav_list__item');
+const about_section = document.querySelector('#about');
+const catalog_section = document.querySelector('#catalog');
+const testimonials_section = document.querySelector('#testimonials');
+
+console.dir(nav_links)
+
+nav_links.forEach(item => {
+    item.addEventListener('click', () => {
+
+        if (item.innerText === 'Про Нас') {
+
+            let i = about_section.offsetTop - logo_container.clientHeight - 50
+
+            window.scrollTo({
+
+                left: 0,
+                top: i,
+                behavior: 'smooth'
+                
+            })
+
+            header_nav.classList.remove('header-nav_open')
+
+        } else if (item.innerText === 'Каталог') {
+
+            window.scroll({
+
+                left: 0,
+                top: catalog_section.offsetTop - logo_container.clientHeight - 50,
+                behavior: 'smooth'
+
+            })
+
+            header_nav.classList.remove('header-nav_open')
+
+        } else if (item.innerText === 'Відгуки') {
+
+            window.scroll({
+
+                left: 0,
+                top: testimonials_section.offsetTop - logo_container.clientHeight - 50,
+                behavior: 'smooth'
+
+            })  
+
+            header_nav.classList.remove('header-nav_open')
+
+        }
+    })
+})
+
+const question_block = document.querySelectorAll('.question');
+
+
+question_block.forEach(item => {
+
+    item.addEventListener('click', () => {
+        console.dir(item)
+        item.firstElementChild.classList.toggle('answer_active')
+    })
+
+})
+
+
+    
