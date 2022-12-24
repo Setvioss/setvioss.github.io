@@ -15,15 +15,16 @@ backdrop.addEventListener('click', () => {
 
 const burger_menu_icon = document.querySelector('.burger-menu_icon');
 const header_nav = document.querySelector('.header-nav');
+const header = document.querySelector('.main-header');
 
 burger_menu_icon.addEventListener('click', () => {
 
     header_nav.classList.toggle('header-nav_open');
+    header.classList.add('header_box-shadow');
 
 })
 
 const promo = document.querySelector('#promo');
-const header = document.querySelector('.main-header');
 const logo_container = document.querySelector('.logo-container');
 
 document.addEventListener('scroll', () => {
@@ -118,13 +119,17 @@ nav_links.forEach(item => {
 })
 
 const question_block = document.querySelectorAll('.question');
+const arrow_icon = document.querySelector('.question_text .arrow-icon')
 
 
 question_block.forEach(item => {
 
     item.addEventListener('click', () => {
-        console.dir(item)
-        item.firstElementChild.classList.toggle('answer_active')
+        console.dir(item.children[0])
+
+        item.children[0].children[0].classList.toggle('arrow-icon_active')
+
+        item.children[1].classList.toggle('answer_active')
     })
 
 })

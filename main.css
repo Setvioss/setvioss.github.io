@@ -254,6 +254,25 @@ main {
 #FAQ .question_container .question {
   cursor: pointer;
 }
+#FAQ .question_container .question .question_text {
+  margin-block: 0;
+  display: flex;
+  align-items: center;
+}
+#FAQ .question_container .question .question_text .arrow-icon {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  margin-left: 1rem;
+  transform: rotate(0deg);
+  transition: all 0.3s linear;
+  background-image: url("images/next.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#FAQ .question_container .question .question_text .arrow-icon.arrow-icon_active {
+  transform: rotate(90deg);
+  transition: all 0.3s linear;
+}
 #FAQ .question_container .question .answer {
   display: none;
 }
@@ -263,7 +282,6 @@ main {
   margin-top: 1rem;
   text-align: left;
   font-style: italic;
-  font-size: 0.9em;
 }
 
 #info {
