@@ -30,6 +30,10 @@ section {
         width: 70%;
         margin-bottom: 5rem;
     }
+
+    @media (min-width: map-get($media-breakpoints, point_4)) {
+        margin-bottom: 7rem;
+    }
 }
 
 a {
@@ -54,6 +58,7 @@ h2 {
         width: 500px;
         margin: 0 auto;
     }
+
 }
 
 p,
@@ -111,7 +116,7 @@ li {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-block: .5rem;
+    // padding-block: .5rem;
     position: fixed;
     top: 0;
     background-color: white;
@@ -136,14 +141,18 @@ li {
         }
 
         @media (min-width: map-get($media-breakpoints, point_2)) {
-            width: 14rem;
-            height: 8rem;
+           // width: 14rem;
+           // height: 8rem;
         }
     }
 
     .phone-number {
 
         @media (min-width: map-get($media-breakpoints, point_2)) {
+            display: none;
+        }
+
+        @media (max-width: 410px) {
             display: none;
         }
     }
@@ -171,13 +180,17 @@ li {
 
         @media (min-width: map-get($media-breakpoints, point_2)) {
             display: flex;
-            flex-direction: row;
             flex-grow: 1;
             flex-direction: column;
             align-items: flex-end;
             margin-left: auto;
             margin-right: 2rem;
             justify-content: center;
+        }
+
+        @media (min-width: map-get($media-breakpoints, point_3)) {
+            flex-direction: row;
+            align-items: center;
         }
 
         &.header-nav_open {
@@ -232,9 +245,8 @@ li {
         .phone-nav {
             display: none;
             align-self: flex-end;
-            font-weight: bold;
-            padding: 0 1rem;
-            border: 1px solid map-get($colors, accent);
+            padding-left: 1rem;
+            font-size: 1rem;
 
             @media (min-width: map-get($media-breakpoints, point_2)) {
                 display: block;
@@ -242,6 +254,8 @@ li {
 
             @media (min-width: map-get($media-breakpoints, point_3)) {
                 align-self: center;
+                padding-left: 0;
+                margin-right: 2rem;
             }
             
         
@@ -251,6 +265,10 @@ li {
                 
                 &:not(:first-child) {
                     margin-left: .5rem;
+
+                    @media (min-width: map-get($media-breakpoints, point_3)) {
+                        margin-left: 0;
+                    }
                 }
 
                 @media (min-width: map-get($media-breakpoints, point_3)) {
