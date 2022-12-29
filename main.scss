@@ -374,20 +374,20 @@ main {
     display: flex;
     flex-direction: column;
 
-    h2 {
-        margin-block-end: 5rem;
-
-        @media (min-width: map-get($media-breakpoints, point_1)) {
-            margin-bottom: 2.5rem;    
-        }
-    }
-
     .info-block {
         flex-direction: row;
         margin-bottom: 1.5rem;
 
+        &:first-child {
+
+            h3 {
+                margin-top: 0;
+            }
+        }
+
         @media (min-width: map-get($media-breakpoints, point_2)) {
-            display: flex;    
+            display: flex;
+            align-items: center;    
         }
 
         .info-block_text {

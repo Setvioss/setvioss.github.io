@@ -321,21 +321,17 @@ main {
   display: flex;
   flex-direction: column;
 }
-#info h2 {
-  margin-block-end: 5rem;
-}
-@media (min-width: 500px) {
-  #info h2 {
-    margin-bottom: 2.5rem;
-  }
-}
 #info .info-block {
   flex-direction: row;
   margin-bottom: 1.5rem;
 }
+#info .info-block:first-child h3 {
+  margin-top: 0;
+}
 @media (min-width: 768px) {
   #info .info-block {
     display: flex;
+    align-items: center;
   }
 }
 #info .info-block .info-block_text {
