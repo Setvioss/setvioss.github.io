@@ -106,16 +106,13 @@ main {
         }
 
         .product-card_single {
-            height: 480px;
+            display: grid;
+            grid-template-rows: 12fr 1fr 1fr 2fr;
+            height: 500px;
 
-            .product-card_image {
-
-                &.product-card_single__image {
-                    width: 100%;
-                    background-image: url("../images/img_4.jpg");
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                }
+            .product-card_single__image {
+                width: 100%;
+       
             }
 
             .product-card_info-row {
@@ -135,6 +132,7 @@ main {
                     }
                 }  
             }
+
         }
     }
 }

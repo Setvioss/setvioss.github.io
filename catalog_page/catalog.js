@@ -1,58 +1,58 @@
 const data = [
     { 
-        id: 3455,
+        id: 'img_4.jpg',
         price: 34000,
         size: '220x90',
         color: 'green'
     },
 
     { 
-        id: 3468,
+        id: 'img_4.jpg',
         price: 78000,
         size: '250x90'
     },
     { 
-        id: 3578,
+        id: 'img_4.jpg',
         price: 56000,
         size: '240x90',
         color: 'red'
     },
     { 
-        id: 3577,
+        id: 'img_4.jpg',
         price: 48000,
         size: '240x90',
         color: 'green'
     },
     { 
-        id: 3633,
+        id: 'img_4.jpg',
         price: 15000,
         size: '240x90'
     },
     { 
-        id: 3678,
+        id: 'img_4.jpg',
         price: 23000,
         size: '240x90',
         color: 'green'
     },
     { 
-        id: 3698,
+        id: 'img_4.jpg',
         price: 84000,
         size: '240x90',
         color: 'red'
     },
     { 
-        id: 3767,
+        id: 'img_4.jpg',
         price: 41000,
         size: '240x90'
     },
     { 
-        id: 3845,
+        id: 'img_4.jpg',
         price: 27000,
         size: '240x90',
         color: 'red'
     },
     { 
-        id: 3814,
+        id: 'img_4.jpg',
         price: 19000,
         size: '240x90',
         color: 'red'
@@ -82,8 +82,8 @@ const display_data__func = (data) => {
     
         `
         <div class="product-card product-card_single">
-    
-        <div class="product-card_image product-card_single__image"></div>
+        
+        <img src="../images/${item.id}" alt="" class="product-card_single__image">
         
         <div class="product-card_info-row">
     
