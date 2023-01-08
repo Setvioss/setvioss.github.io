@@ -91,25 +91,60 @@
             </div>
 
             <div class="filter-block">
-                <div class="filter-content">
+                <div class="price-filter-content">
 
                     <p>Фільтрувати по ціні:</p>
 
-                    <button class="button filter-button">Всі</button>
-                    <button class="button filter-button">Від 14 000 до 25 000</button>
-                    <button class="button filter-button">Від 25 000 до 40 000</button>
-                    <button class="button filter-button">Від 40 000 до 60 000</button>
-                    <button class="button filter-button">Від 60 000</button>
+                    <button 
+                        class="button filter-button active"
+                        data-low-price="0" 
+                        data-high-price="200000">
+
+                        Всі
+
+                    </button>
+                    <button 
+                        class="button filter-button" 
+                        data-low-price="14000" 
+                        data-high-price="25000">
+                        
+                        Від 14 000 до 25 000
+
+                    </button>
+                    <button 
+                        class="button filter-button"
+                        data-low-price="25000" 
+                        data-high-price="40000">
+                    
+                        Від 25 000 до 40 000
+
+                    </button>
+                    <button 
+                        class="button filter-button"
+                        data-low-price="40000" 
+                        data-high-price="60000">
+
+                        Від 40 000 до 60 000
+
+                    </button>
+                    <button 
+                        class="button filter-button"
+                        data-low-price="60000" 
+                        data-high-price="200000">
+
+                        Від 60 000
+                    
+                    </button>
 
 
                 </div>
 
-                <div class="filter-content">
+                <div class="color-filter-content">
 
                     <p>Фільтрувати по кольору:</p>
 
-                    <button class="button filter-button filter_color_button">Червоні</button>
-                    <button class="button filter-button filter_color_button">Зелені</button>
+                    <button class="button filter-button">Червоні</button>
+                    <button class="button filter-button">Зелені</button>
 
 
                 </div>

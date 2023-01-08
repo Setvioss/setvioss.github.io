@@ -60,17 +60,19 @@ const data = [
 
 ]
 
-let filtered_data_14_25;
-let filtered_data_25_40;
-let filtered_data_40_60;
-let filtered_data_60;
+let filtered_data_14_25 = [];
+let filtered_data_25_40 = [];
+let filtered_data_40_60 = [];
+let filtered_data_60 = [];
+
+let filtered_price_data = [];
 
 let current_data;
 
 
 const select = document.querySelector('.sort')
 const card = document.querySelector('.product-cards-block')
-const filter_buttons = document.querySelectorAll('.filter-button')
+
 
 const display_data__func = (data) => {
 
@@ -107,6 +109,25 @@ const display_data__func = (data) => {
     })
 
     current_data = data;
+
+    select.addEventListener('change', e => {
+        if (e.target.value ==="1"){
+    
+            current_data.sort((a, b) => {   
+                return a.price - b.price;
+            })
+    
+            display_data__func(current_data);
+    
+        } else {
+    
+            current_data.sort((a, b) => {
+                return b.price - a.price;
+            })
+    
+            display_data__func(current_data);
+        }
+    })
 }
 
 data.sort((a, b) => {
@@ -115,37 +136,29 @@ data.sort((a, b) => {
 
 display_data__func(data);
 
+const filter_buttons = document.querySelectorAll('.price-filter-content .filter-button')
+const all_prices_button = document.querySelector('[data-low-price="0"]')
 
-
-const price_filter__func = (filter_query) => {
+const price_filter__func = (filter_query, e) => {
 
     console.log(filter_query)
 
-    if (filter_query === 'ВСІ') {
+    console.log(filtered_price_data)
+    filtered_price_data = []
+    console.log(filtered_price_data)
 
-        display_data__func(data);
+    if (filter_query === 'ВСІ' && e.classList.contains('active')){
 
-        select.addEventListener('change', e => {
-            if (e.target.value === "1") {
+        filtered_data_14_25 = []
+        filtered_data_25_40 = []
+        filtered_data_40_60 = []
+        filtered_data_60 = []
 
-                data.sort((a, b) => {
-                    return a.price - b.price;
-                })
+        display_data__func(data)
 
-                display_data__func(data);
+    }    
 
-            } else {
-
-                data.sort((a, b) => {
-                    return b.price - a.price;
-                })
-
-                display_data__func(data);
-            }
-        })
-
-
-    } else if (filter_query === 'ВІД 14 000 ДО 25 000') {
+    if (filter_query === 'ВІД 14 000 ДО 25 000' && e.classList.contains('active')){
 
         filtered_data_14_25 = data.filter(item => {
 
@@ -153,31 +166,13 @@ const price_filter__func = (filter_query) => {
 
         })
 
-        select.addEventListener('change', e => {
-            if (e.target.value === "1") {
+    } else if (filter_query === 'ВІД 14 000 ДО 25 000' && !e.classList.contains('active')){
 
-                filtered_data_14_25.sort((a, b) => {
-                    return a.price - b.price;
-                })
+        filtered_data_14_25 = [];
 
-                display_data__func(filtered_data_14_25);
+    }
 
-            } else {
-
-                filtered_data_14_25.sort((a, b) => {
-                    return b.price - a.price;
-                })
-
-                display_data__func(filtered_data_14_25);
-            }
-        })
-
-        display_data__func(filtered_data_14_25);
-
-        console.dir(card)
-
-
-    } else if (filter_query === 'ВІД 25 000 ДО 40 000') {
+    if (filter_query === 'ВІД 25 000 ДО 40 000' && e.classList.contains('active')){
 
         filtered_data_25_40 = data.filter(item => {
 
@@ -185,29 +180,13 @@ const price_filter__func = (filter_query) => {
 
         })
 
-        select.addEventListener('change', e => {
-            if (e.target.value === "1") {
+    } else if (filter_query === 'ВІД 25 000 ДО 40 000' && !e.classList.contains('active')){
 
-                filtered_data_25_40.sort((a, b) => {
-                    return a.price - b.price;
-                })
+        filtered_data_25_40 = [];
 
-                display_data__func(filtered_data_25_40);
+    }
 
-            } else {
-
-                filtered_data_25_40.sort((a, b) => {
-                    return b.price - a.price;
-                })
-
-                display_data__func(filtered_data_25_40);
-            }
-        })
-
-        display_data__func(filtered_data_25_40);
-
-
-    } else if (filter_query === 'ВІД 40 000 ДО 60 000') {
+    if (filter_query === 'ВІД 40 000 ДО 60 000' && e.classList.contains('active')){
 
         filtered_data_40_60 = data.filter(item => {
 
@@ -215,29 +194,13 @@ const price_filter__func = (filter_query) => {
 
         })
 
-        select.addEventListener('change', e => {
-            if (e.target.value === "1") {
+    } else if (filter_query === 'ВІД 40 000 ДО 60 000' && !e.classList.contains('active')){
 
-                filtered_data_40_60.sort((a, b) => {
-                    return a.price - b.price;
-                })
+        filtered_data_40_60 = [];
 
-                display_data__func(filtered_data_40_60);
+    } 
 
-            } else {
-
-                filtered_data_40_60.sort((a, b) => {
-                    return b.price - a.price;
-                })
-
-                display_data__func(filtered_data_40_60);
-            }
-        })
-
-        display_data__func(filtered_data_40_60);
-
-        
-    } else if (filter_query === 'ВІД 60 000') {
+    if (filter_query === 'ВІД 60 000' && e.classList.contains('active')){
 
         filtered_data_60 = data.filter(item => {
 
@@ -245,60 +208,93 @@ const price_filter__func = (filter_query) => {
 
         })
 
-        select.addEventListener('change', e => {
-            if (e.target.value === "1") {
+    } else if (filter_query === 'ВІД 60 000' && !e.classList.contains('active')){
 
-                filtered_data_60.sort((a, b) => {
-                    return a.price - b.price;
-                })
+        filtered_data_60 = [];
 
-                display_data__func(filtered_data_60);
-
-            } else {
-
-                filtered_data_60.sort((a, b) => {
-                    return b.price - a.price;
-                })
-
-                display_data__func(filtered_data_60);
-            }
-        })
-
-        display_data__func(filtered_data_60);
-
-        
     }
 
-    
-}
+    console.log(filtered_data_14_25)
+    console.log(filtered_data_25_40)
+    console.log(filtered_data_40_60)
+    console.log(filtered_data_60)
 
-select.addEventListener('change', e => {
-    if (e.target.value ==="1"){
+    filtered_price_data = filtered_price_data.concat(
+        filtered_data_14_25, 
+        filtered_data_25_40,
+        filtered_data_40_60,
+        filtered_data_60
+    )
+    console.dir(filtered_price_data)
 
-        data.sort((a, b) => {   
+    if (select.value ==='1'){
+
+        filtered_price_data.sort((a, b) => {   
             return a.price - b.price;
         })
 
-        display_data__func(data);
-
     } else {
 
-        data.sort((a, b) => {
+        filtered_price_data.sort((a, b) => {   
             return b.price - a.price;
         })
 
-        display_data__func(data);
     }
-})
+
+    if (filter_query !== 'ВСІ') display_data__func(filtered_price_data)
+
+    //console.log(filter_buttons.every(each => classList.contains('active')))
+    if (!filter_buttons[1].classList.contains('active') &&
+        !filter_buttons[2].classList.contains('active') &&
+        !filter_buttons[3].classList.contains('active') &&
+        !filter_buttons[4].classList.contains('active')
+    ){
+        all_prices_button.classList.add('active')
+
+        if (select.value ==='1'){
+
+            data.sort((a, b) => {   
+                return a.price - b.price;
+            })
+    
+        } else {
+    
+            data.sort((a, b) => {   
+                return b.price - a.price;
+            })
+    
+        }
+
+        display_data__func(data)
+
+    }
+
+}
+
 
 filter_buttons.forEach(item => {
 
     item.addEventListener('click', e => {
 
+        if (e.target !== all_prices_button){
+
+            all_prices_button.classList.remove('active')
+
+            e.target.classList.toggle('active')
+
+        } else {
+
+            filter_buttons.forEach(item => {
+                item.classList.remove('active')
+            }) 
+
+            e.target.classList.add('active')
+        }
+
         let filter_query = e.target.innerText;
 
-        price_filter__func(filter_query)
-
+        price_filter__func(filter_query, e.target)
+        
     })
 })
 
