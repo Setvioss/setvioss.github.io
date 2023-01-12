@@ -308,8 +308,58 @@ li {
     }
 }
 
-footer {
-    margin-block: 2rem;
-    display: flex;
-    justify-content: center;
+#main-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 120px;
+    justify-items: center;
+    margin-top: 2rem;
+    height: 240px;
+    background-color: map-get($colors, main);
+    text-align: center;
+    padding: 1rem;
+
+    h5 {
+        margin-block: .8rem;
+    }
+
+    .footer-nav {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+
+        align-self: center;
+
+        .footer-nav_list {
+            list-style: none;
+            margin-block: 2rem;
+    
+            li {
+                margin-block: .5rem;
+            }
+        }
+    }
+
+    .footer-address-container {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        align-self: center;
+    }
+
+    .footer-social-container {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 3;
+    }    
+
+    .footer-contacts-container {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+    }
+
 }
