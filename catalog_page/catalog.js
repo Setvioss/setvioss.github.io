@@ -1,5 +1,6 @@
 const data = [
     { 
+        id_2: 'item_234',
         id: 'img_4.jpg',
         price: 34000,
         size: '220x90',
@@ -7,51 +8,60 @@ const data = [
     },
 
     { 
-        id: 'img_4.jpg',
+        id_2: 'item_235',
+        id: 'crown.jpg',
         price: 78000,
         size: '250x90'
     },
     { 
-        id: 'img_4.jpg',
+        id_2: 'item_236',
+        id: 'img_1.jpg',
         price: 56000,
         size: '240x90',
         color: 'red'
     },
     { 
-        id: 'img_4.jpg',
+        id_2: 'item_237',
+        id: 'img_3.jpg',
         price: 48000,
         size: '240x90',
         color: 'green'
     },
     { 
-        id: 'img_4.jpg',
+        id_2: 'item_238',
+        id: 'img_10.jpg',
         price: 15000,
         size: '240x90'
     },
     { 
-        id: 'img_4.jpg',
+        id_2: 'item_239',
+        id: 'logo.jpg',
         price: 23000,
         size: '240x90',
         color: 'green'
     },
     { 
-        id: 'img_4.jpg',
+        id_2: 'item_240',
+        id: 'next.jpg',
         price: 84000,
         size: '240x90',
         color: 'red'
     },
     { 
+        id_2: 'item_241',
         id: 'img_4.jpg',
         price: 41000,
         size: '240x90'
     },
     { 
+        id_2: 'item_242',
         id: 'img_4.jpg',
         price: 27000,
         size: '240x90',
         color: 'red'
     },
     { 
+        id_2: 'item_243',
         id: 'img_4.jpg',
         price: 19000,
         size: '240x90',
@@ -87,33 +97,34 @@ const display_data__func = (data) => {
         card.innerHTML += 
     
         `
+
         <div class="product-card product-card_single">
-        
-        <img src="../images/${item.id}" alt="" class="product-card_single__image">
-        
+            
+        <img src="../images/${item.id}" alt="" class="product-card_single__image" loading="lazy">
+            
         <div class="product-card_info-row">
-    
+        
             <p>Ціна</p>
             <p>${item.price} грн</p>
-    
+        
         </div>
-    
+        
         <div class="product-card_info-row">
-    
+        
             <p>Розмір</p>
             <p>${item.size}</p>
-    
+        
         </div>
 
         <div class="product-card_info-row">
-    
+        
             <p>Колір</p>
             <p>${item.color}</p>
-    
-        </div>
-    
-        <button class="button product-сontainer_button">Детальніше</button>
         
+        </div>
+        
+        <button class="button product-сard_button" data-item-id="${item.id_2}">Детальніше</button>
+            
         </div>
         `
     
@@ -540,3 +551,30 @@ const color_filter__func = (filter_query, e) => {
     }
 
 }
+
+const product_card = document.querySelector('.product-card')
+const product_сard_buttons = document.querySelectorAll('.product-сard_button')
+const product_modal = document.querySelector('.product_modal')
+
+
+
+
+product_сard_buttons.forEach(each => {
+
+        each.addEventListener('click', e => {
+    
+            //backdrop.classList.add('backdrop-active')
+            let item_id = e.target.dataset.itemId
+            //product_modal.classList.add('product_modal__active')
+
+            let loc = window.location.href
+            window.location.href = `${loc}${item_id}`
+            //console.log(window.location.href)
+        
+        })
+        
+})
+    
+
+
+

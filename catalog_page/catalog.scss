@@ -1,5 +1,20 @@
 @import "../variables.scss";
 
+
+.product_modal {
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    background-color: white;
+    width: 60%;
+    z-index: 300;
+    display: none;
+
+    &.product_modal__active {
+        display: block;
+    }
+}
+
 main {
     margin-block-start: 7rem;
 }
@@ -113,7 +128,7 @@ main {
         .product-card_single {
             display: grid;
             grid-template-rows: 12fr 1fr 1fr 2fr;
-            height: 500px;
+            height: 550px;
 
             .product-card_single__image {
                 width: 100%;
