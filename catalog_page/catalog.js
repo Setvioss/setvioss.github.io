@@ -82,17 +82,30 @@ let filtered_price_data = [];
 let filtered_color_data = [];
 
 let current_data;
+let sliced_current_data = {
+
+    show_quantity: 5
+    
+
+}
 
 
 const select = document.querySelector('.sort')
 const card = document.querySelector('.product-cards-block')
 
 
-const display_data__func = (data) => {
-    
+const display_data__func = (data, show_quantity = 5) => {
+    console.log(show_quantity)
+
     card.innerHTML = "";
 
-    data.forEach(item => {
+    const show_products = data.slice(0, show_quantity);
+
+    console.log(1234)
+    console.log(show_products)
+    console.log(1234)
+
+    show_products.forEach(item => {
 
         card.innerHTML += 
     
@@ -558,7 +571,7 @@ const product_modal = document.querySelector('.product_modal')
 
 
 
-
+/*
 product_сard_buttons.forEach(each => {
 
         each.addEventListener('click', e => {
@@ -574,7 +587,23 @@ product_сard_buttons.forEach(each => {
         })
         
 })
-    
+*/
+
+const show_more_button = document.querySelector('.show-more-button')
+
+show_more_button.addEventListener('click', e => {
+
+    console.log(current_data)
+
+    sliced_current_data.show_quantity += 3;
+
+    console.log(sliced_current_data)
+
+    display_data__func(current_data, sliced_current_data.show_quantity)
+
+})
+
+
 
 
 
