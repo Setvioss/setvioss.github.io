@@ -1,0 +1,23 @@
+{
+  "name": "monuments_website",
+  "version": "1.0.0",
+  "description": "monuments website",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Setvioss/setvioss.github.io.git"
+  },
+  "author": "Stas M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Setvioss/setvioss.github.io/issues"
+  },
+  "homepage": "https://github.com/Setvioss/setvioss.github.io#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2"
+  }
+}
